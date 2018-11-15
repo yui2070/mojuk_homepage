@@ -27,16 +27,10 @@
 			top: 50px;
 			left: 100px;
 		}
-		
-		#logo {
-			width: 100px;
-			height: 80px;
-			position: relative;
-			top:350px;
-			left:1400px;
-		}
 	</style>
+<link rel="stylesheet" type="text/css" href="resources/css/images.css"/>
 </head>
+<script type="css"></script>
 <body class="wrapper">
 <div id="login">
 	<table id="login_form">
@@ -54,11 +48,11 @@
 		</tr>
 	</table>
 </div>
-<img alt="mojuk_logo" src="resources/images/mojuk_logo.png" id="logo">
+<img alt="mojuk_logo" src="resources/images/mojuk_logo.png" id="f_logo">
 </body>
 <script type="text/javascript">
 	function login() {
-		
+		location.href='main';
 	}
 </script>
 </html>

@@ -1,7 +1,5 @@
 package com.inhatc.mj;
 
-import java.text.DateFormat;
-import java.util.Date;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -22,18 +20,39 @@ public class HomeController {
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-		logger.info("Welcome home! The client locale is {}.", locale);
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(Locale locale, Model model) {
 		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
-		return "home";
+		return "login";
 	}
 	
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String main(Locale locale, Model model) {
+		
+		return "main";
+	}
+	
+	@RequestMapping(value = "/no_list", method = RequestMethod.GET)
+	public String no_list(Locale locale, Model model) {
+		
+		return "/notice/no_list";
+	}
+	
+	@RequestMapping(value = "/no_write", method = RequestMethod.GET)
+	public String no_write(Locale locale, Model model) {
+		
+		return "/notice/no_write";
+	}
+	
+	@RequestMapping(value = "/pro_list", method = RequestMethod.GET)
+	public String pro_list(Locale locale, Model model) {
+		
+		return "/project/pro_list";
+	}
+	
+	@RequestMapping(value = "/pro_write", method = RequestMethod.GET)
+	public String pro_write(Locale locale, Model model) {
+		
+		return "/project/pro_write";
+	}
 }
